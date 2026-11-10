@@ -1,0 +1,337 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" height="600px" width="800px" version="1.1" preserveAspectRatio="none" viewBox="0 0 800 600">
+<title>World Energy Consumption</title>
+<desc>Translations are included for Arabic, Chinese, Dutch, English, Finnish, French, German, Italian, Japanese, Polish, Portuguese, Russian, Spanish, and Swedish. Other languages can easily be added.</desc>
+<!-- background -->
+<rect width="100%" fill="#fff" height="100%"/>
+<!--
+	CALCULATIONS:
+		x1 = Origin + Radius*cos(0)
+		y1 = Origin + Radius*sin(0)
+
+		x2 = Origin + Radius*cos(Angle1)
+		y2 = Origin + Radius*sin(Angle1)
+
+		x3 = Origin + Radius*cos(Angle2)
+		y3 = Origin + Radius*sin(Angle2)
+	EXAMPLE:
+		For a pie chart that starts at 300, 300 (centered at 300,300), and with a radius of 250, and with data of 32.36%, 23.73%, 30.06%, 4.42%, 9.37%
+
+		Section	Color	Slice	Angle	x	y
+					0	550	300
+		A	brown	32.36%	116.5	188.45	523.73
+		B	blue	23.73%	201.9	68.04	206.75
+		C	gray	30.06%	310.1	461.03	108.77
+		D	orange	4.42%	326.1	507.50	160.56
+		E	green	9.37%	360	550.00	300.00
+
+		Path goes from center to outside right, then along arc clockwise to point 1, then back to center. Next path goes from center to last point, then along arc to the next point, then back to the center. The last section goes from the center to the last point, then along the arc to the starting point. The color of each section is set by the fill.
+
+		<path fill="brown" stroke="black" stroke-width="1" d="M300,300  L550,300  A250,250 0 0,1 188.45,523.73 z"/>
+		<path fill="blue" stroke="black" stroke-width="1" d="M300,300  L188.45,523.73  A250,250 0 0,1 68.04,206.75 z"/>
+		<path fill="gray" stroke="black" stroke-width="1" d="M300,300  L68.04,206.75  A250,250 0 0,1 461.03,108.77 z"/>
+		<path fill="orange" stroke="black" stroke-width="1" d="M300,300  L461.03,108.77  A250,250 0 0,1 507.50,160.56 z"/>
+		<path fill="green" stroke="black" stroke-width="1" d="M300,300  L507.50,160.56  A250,250 0 0,1 550,300 z"/>
+
+-->
+
+
+<g font-family="Verdana, Tahoma, sans-serif" transform="translate(-40 -65)" text-anchor="middle">
+<!-- Chart -->
+	<g id="chart" transform="translate(0 60)">
+		<!-- Petroleum -->
+		<path fill="brown" stroke="black" stroke-width="1" d="M300,300  L550,300  A250,250 0 0,1 181.0529,519.8899 z"/>
+		<!-- Coal -->
+		<path fill="gray" stroke="black" stroke-width="1" d="M300,300  L181.0529,519.8899  A250,250 0 0,1 118.3110,128.2761 z"/>
+		<!-- Natural Gas -->
+		<path fill="lightblue" stroke="black" stroke-width="1" d="M300,300  L118.3110,128.2761  A250,250 0 0,1 452.6268,101.9973 z"/>
+		<!-- Nuclear -->
+		<path fill="orange" stroke="black" stroke-width="1" d="M300,300  L452.6268,101.9973  A250,250 0 0,1 501.1406,151.5329 z"/>
+		<!-- Hydroelectric -->
+		<path fill="blue" stroke="black" stroke-width="1" d="M300,300  L501.1406,151.5329  A250,250 0 0,1 544.5180,247.9334 z"/>
+		<!-- Wind -->
+		<path fill="green" stroke="black" stroke-width="1" d="M300,300  L544.5180,247.9334  A250,250 0 0,1 548.2326,270.3254 z"/>
+		<!-- Solar -->
+		<path fill="yellow" stroke="black" stroke-width="1" d="M300,300  L548.2326,270.3254  A250,250 0 0,1 548.9505,277.1172 z"/>
+		<!-- Biofuel -->
+		<path fill="lightgreen" stroke="black" stroke-width="1" d="M300,300  L548.9505,277.1172  A250,250 0 0,1 549.6088,286.0206 z"/>
+		<!-- Other -->
+		<path fill="violet" stroke="black" stroke-width="1" d="M300,300  L549.6088,286.0206  A250,250 0 0,1 550,300 z"/>
+	</g>
+
+<!-- Legend -->
+	<g id="data_legend" font-size="20">
+		<g transform="translate(360 460)" stroke="white" fill="white">
+			<switch>
+				<text systemLanguage="ar">البترول</text>
+				<text systemLanguage="de">Erdöl</text>
+				<text systemLanguage="es">Petróleo</text>
+				<text systemLanguage="fi">Maaöljy</text>
+				<text systemLanguage="fr">Pétrole</text>
+				<text systemLanguage="it">Petrolio</text>
+				<text systemLanguage="ja">石油</text>
+				<text systemLanguage="nl">Aardolie</text>
+				<text systemLanguage="pl">Ropa naftowa</text>
+				<text systemLanguage="pt">Petróleo</text>
+				<text systemLanguage="ru">Petróleo</text>
+				<text systemLanguage="sv">Petroleum</text>
+				<text systemLanguage="zh">石油</text>
+				<text>Petroleum</text>
+			</switch>
+			<switch>
+				<text systemLanguage="ar" y="22">Mtoe 4331</text>
+				<text y="22">4331 Mtoe</text>
+			</switch>
+			<switch>
+				<text systemLanguage="ar" y="44">%32,89</text>
+				<text systemLanguage="en ja zh" y="44">32.89%</text>
+				<text y="44">32,89%</text>
+			</switch>
+		</g>
+		<g transform="translate(150 370)" stroke="white" fill="white">
+			<switch>
+				<text systemLanguage="ar">فحم حجري</text>
+				<text systemLanguage="de">Kohle</text>
+				<text systemLanguage="es">Carbón</text>
+				<text systemLanguage="fi">Kivihiili</text>
+				<text systemLanguage="fr">Charbon</text>
+				<text systemLanguage="it">Carbone</text>
+				<text systemLanguage="ja">石炭</text>
+				<text systemLanguage="nl">Steenkool</text>
+				<text systemLanguage="pl">Węgle kopalne</text>
+				<text systemLanguage="pt">Carvão mineral</text>
+				<text systemLanguage="ru">Уголь</text>
+				<text systemLanguage="sv">Kol</text>
+				<text systemLanguage="zh">煤</text>
+				<text>Coal</text>
+			</switch>
+			<switch>
+				<text systemLanguage="ar" y="22">Mtoe 3840</text>
+				<text y="22">3840 Mtoe</text>
+			</switch>
+			<switch>
+				<text systemLanguage="ar" y="44">%29,16</text>
+				<text systemLanguage="en ja zh" y="44">29.16%</text>
+				<text y="44">29,16%</text>
+			</switch>
+		</g>
+		<g transform="translate(280 190)" stroke="black" fill="black">
+			<switch>
+				<text systemLanguage="ar">غاز طبيعي</text>
+				<text systemLanguage="de">Erdgas</text>
+				<text systemLanguage="es">Gas Natural</text>
+				<text systemLanguage="fi">Maakaasu</text>
+				<text systemLanguage="fr">Gaz naturel</text>
+				<text systemLanguage="it">Gas naturale</text>
+				<text systemLanguage="ja">天然ガス</text>
+				<text systemLanguage="nl">Aardgas</text>
+				<text systemLanguage="pl">Gaz ziemny</text>
+				<text systemLanguage="pt">Gás natural</text>
+				<text systemLanguage="ru">Природный газ</text>
+				<text systemLanguage="sv">Naturgas</text>
+				<text systemLanguage="zh">天然气</text>
+				<text>Natural Gas</text>
+			</switch>
+			<switch>
+				<text systemLanguage="ar" y="22">Mtoe 3082</text>
+				<text y="22">3082 Mtoe</text>
+			</switch>
+			<switch>
+				<text systemLanguage="ar" y="44">%23,40</text>
+				<text systemLanguage="en ja zh" y="44">23.40%</text>
+				<text y="44">23,40%</text>
+			</switch>
+		</g>
+		<g transform="translate(535 145)" stroke="black" fill="black">
+			<switch>
+				<text systemLanguage="ar">نووي</text>
+				<text systemLanguage="de">Kernenergie</text>
+				<text systemLanguage="es">Nuclear</text>
+				<text systemLanguage="fi">Ydinvoima</text>
+				<text systemLanguage="fr">Nucléaire</text>
+				<text systemLanguage="it">Nucleare</text>
+				<text systemLanguage="ja">原子力</text>
+				<text systemLanguage="nl">Kernenergie</text>
+				<text systemLanguage="pl">Jądrowa</text>
+				<text systemLanguage="pt">Nuclear</text>
+				<text systemLanguage="ru">Ядерная</text>
+				<text systemLanguage="sv">Kärnenergi</text>
+				<text systemLanguage="zh">核動力</text>
+				<text>Nuclear</text>
+			</switch>
+			<switch>
+				<text systemLanguage="ar" y="22">‏2577 تيراوات</text>
+				<text y="22">2577 TWh</text>
+			</switch>
+			<switch>
+				<text systemLanguage="ar" y="44">%4,43</text>
+				<text systemLanguage="en ja zh" y="44">4.43%</text>
+				<text y="44">4,43%</text>
+			</switch>
+		</g>
+		<g transform="translate(610 250)" stroke="black" fill="black">
+			<switch>
+				<text systemLanguage="ar">طاقة كهرمائية</text>
+				<text systemLanguage="de">Wasserkraft</text>
+				<text systemLanguage="es">Hidroeléctrica</text>
+				<text systemLanguage="fi">Vesivoima</text>
+				<text systemLanguage="fr">Hydroélectrique</text>
+				<text systemLanguage="it">Idroelettrica</text>
+				<text systemLanguage="ja">水力発電</text>
+				<text systemLanguage="nl">Waterkracht</text>
+				<text systemLanguage="pl">Energia wodna</text>
+				<text systemLanguage="pt">Hidrelétrica</text>
+				<text x="20" systemLanguage="ru">Гидроэнергетика</text>
+				<text systemLanguage="sv">Vattenkraft</text>
+				<text systemLanguage="zh">水力發電</text>
+				<text>Hydroelectric</text>
+			</switch>
+			<switch>
+				<text systemLanguage="ar" y="22">‏3946 تيراوات</text>
+				<text y="22">3946 TWh</text>
+			</switch>
+			<switch>
+				<text systemLanguage="ar" y="44">%6,78</text>
+				<text systemLanguage="en ja zh" y="44">6.78%</text>
+				<text y="44">6,78%</text>
+			</switch>
+		</g>
+		<g text-anchor="start" stroke="black" fill="black" font-size="18">
+			<switch>
+				<text x="560" y="325" systemLanguage="ar">‎%1,45 طاقة رياح 841 تيراوات</text>
+				<text x="560" y="325" systemLanguage="de">Windkraft 841 TWh 1,45%</text>
+				<text x="560" y="325" systemLanguage="es">Eólica 841 TWh 1,45%</text>
+				<text x="560" y="325" systemLanguage="fi">Tuuli 841 TWh 1,45%</text>
+				<text x="560" y="325" systemLanguage="fr">Éolienne 841 TWh 1,45%</text>
+				<text x="560" y="325" systemLanguage="it">Eolica 841 TWh 1,45%</text>
+				<text x="560" y="325" systemLanguage="ja">風力発電 841 TWh 1.45%</text>
+				<text x="560" y="325" systemLanguage="nl">Winde 841 TWh 1,45%</text>
+				<text x="560" y="325" systemLanguage="pl">Wiatru 841 TWh 1,45%</text>
+				<text x="560" y="325" systemLanguage="pt">Eólica 841 TWh 1,45%</text>
+				<text x="560" y="325" systemLanguage="ru">Ветер 841 TWh 1,45%</text>
+				<text x="560" y="325" systemLanguage="sv">Vindkraft 841 TWh 1,45%</text>
+				<text x="560" y="325" systemLanguage="zh">風能 841 TWh 1.45%</text>
+				<text x="560" y="325">Wind 841 TWh 1.45%</text>
+			</switch>
+			<switch>
+				<text x="560" y="347" systemLanguage="ar">‎%0,43 طاقة شمسية 253.0 تيراوات</text>
+				<text x="560" y="347" systemLanguage="de">Solarstrom 253,0 TWh 0,43%</text>
+				<text x="560" y="347" systemLanguage="es">Solar 253,0 TWh 0,43%</text>
+				<text x="560" y="347" systemLanguage="fi">Aurinko 253,0 TWh 0,43%</text>
+				<text x="560" y="347" systemLanguage="fr">Solaire 253,0 TWh 0,43%</text>
+				<text x="560" y="347" systemLanguage="it">Solare 253,0 TWh 0,43%</text>
+				<text x="560" y="347" systemLanguage="ja">太陽エネルギー 253.0 TWh 0.43%</text>
+				<text x="560" y="347" systemLanguage="nl">Zonne 253,0 TWh 0,43%</text>
+				<text x="560" y="347" systemLanguage="pl">Słoneczna 253,0 TWh 0,43%</text>
+				<text x="560" y="347" systemLanguage="pt">Solar 253,0 TWh 0,43%</text>
+				<text x="560" y="347" systemLanguage="ru">Солнечная 253,0 TWh 0,43%</text>
+				<text x="560" y="347" systemLanguage="sv">Solenergi 253,0 TWh 0,43%</text>
+				<text x="560" y="347" systemLanguage="zh">太陽能發電 253.0 TWh 0.43%</text>
+				<text x="560" y="347">Solar 253.0 TWh 0.43%</text>
+			</switch>
+			<switch>
+				<text x="560" y="369" systemLanguage="ar">‎%0,57 Mtoe وقود حيوي 75</text>
+				<text x="560" y="369" systemLanguage="de">Biobrennstoffe 75 Mtoe 0,57%</text>
+				<text x="560" y="369" systemLanguage="es">Biocarburante 75 Mtoe 0,57%</text>
+				<text x="560" y="369" systemLanguage="fi">Biopolttoaine 75 Mtoe 0,57%</text>
+				<text x="560" y="369" systemLanguage="fr">Biocarburant 75 Mtoe 0,57%</text>
+				<text x="560" y="369" systemLanguage="it">Biocombustibile 75 Mtoe 0,57%</text>
+				<text x="560" y="369" systemLanguage="ja">バイオ燃料 75 Mtoe 0.57%</text>
+				<text x="560" y="369" systemLanguage="nl">Biobrandstof 75 Mtoe 0,57%</text>
+				<text x="560" y="369" systemLanguage="pl">Biopaliwo 75 Mtoe 0,57%</text>
+				<text x="560" y="369" systemLanguage="pt">Biocombustível 75 Mtoe 0,57%</text>
+				<text x="560" y="369" systemLanguage="ru">Биото́пливо 75 Mtoe 0,57%</text>
+				<text x="560" y="369" systemLanguage="sv">Biobränsle 75 Mtoe 0,57%</text>
+				<text x="560" y="369" systemLanguage="zh">生物燃料 75 Mtoe 0.57%</text>
+				<text x="560" y="369">Biofuel 75 Mtoe 0.57%</text>
+			</switch>
+			<switch>
+				<text x="560" y="391" systemLanguage="ar">‎%0,89 آخر 518 تيراوات</text>
+				<text x="560" y="391" systemLanguage="de">Andere 518 TWh 0,89%</text>
+				<text x="560" y="391" systemLanguage="es">Otro 518 TWh 0,89%</text>
+				<text x="560" y="391" systemLanguage="fi">Muut 518 TWh 0,89%</text>
+				<text x="560" y="391" systemLanguage="fr">Autre 518 TWh 0,89%</text>
+				<text x="560" y="391" systemLanguage="it">Altro 518 TWh 0,89%</text>
+				<text x="560" y="391" systemLanguage="ja">その他 518 TWh 0.89%</text>
+				<text x="560" y="391" systemLanguage="nl">Ander 518 TWh 0,89%</text>
+				<text x="560" y="391" systemLanguage="pl">Inny 518 TWh 0,89%</text>
+				<text x="560" y="391" systemLanguage="pt">Outro 518 TWh 0,89%</text>
+				<text x="560" y="391" systemLanguage="ru">Другой 518 TWh 0,89%</text>
+				<text x="560" y="391" systemLanguage="sv">Annat 518 TWh 0,89%</text>
+				<text x="560" y="391" systemLanguage="zh">其他 518 TWh 0.89%</text>
+				<text x="560" y="391">Other 518 TWh 0.89%</text>
+			</switch>
+		</g>
+	</g>
+
+<!-- Title -->
+	<g id="title" font-size="36" transform="translate(300 480)" stroke="black" fill="black" text-anchor="start">
+	<switch>
+		<text x="450" y="70" text-anchor="end" systemLanguage="ar">مصادر الطاقة</text>
+		<text x="200" y="70" systemLanguage="de">Weltenergie-</text>
+		<text x="200" y="70" systemLanguage="es">Mundial</text>
+		<text x="200" y="70" systemLanguage="fi">Maailman</text>
+		<text x="200" y="70" systemLanguage="fr">Énergétiques</text>
+		<text x="200" y="70" systemLanguage="it">Consumo</text>
+		<text x="200" y="70" systemLanguage="ja">世界</text>
+		<text x="200" y="70" systemLanguage="nl">Wereld</text>
+		<text x="200" y="70" systemLanguage="pl">Zużycie</text>
+		<text x="200" y="70" systemLanguage="pt">Geração</text>
+		<text x="200" y="70" systemLanguage="ru">Мировое</text>
+		<text x="200" y="70" systemLanguage="sv">Världens</text>
+		<text x="200" y="70" systemLanguage="zh">世界</text>
+		<text x="200" y="70">World Energy</text>
+	</switch>
+	<switch>
+		<text x="450" y="110" text-anchor="end" systemLanguage="ar">والاستهلاك</text>
+		<text x="200" y="110" systemLanguage="de">verbrauch</text>
+		<text x="200" y="110" systemLanguage="es">de Energía</text>
+		<text x="200" y="110" systemLanguage="fi">Energiankulutus</text>
+		<text x="200" y="110" systemLanguage="fr">Mondiales</text>
+		<text x="200" y="110" systemLanguage="it">di energia</text>
+		<text x="200" y="110" systemLanguage="ja">エネルギー</text>
+		<text x="200" y="110" systemLanguage="nl">Eenergieverbruik</text>
+		<text x="200" y="110" systemLanguage="pl">energii</text>
+		<text x="200" y="110" systemLanguage="pt">de energia</text>
+		<text x="200" y="110" systemLanguage="ru">потребление</text>
+		<text x="200" y="110" systemLanguage="sv">energiförbrukning</text>
+		<text x="200" y="110" systemLanguage="zh">能源</text>
+		<text x="200" y="110">Consumption</text>
+	</switch>
+	<switch>
+		<text x="450" y="150" text-anchor="end" systemLanguage="ar">(2015)</text>
+		<text x="200" y="150" systemLanguage="de">(2015)</text>
+		<text x="200" y="150" systemLanguage="es">Consumo</text>
+		<text x="200" y="150" systemLanguage="fi">ja energiavarat</text>
+		<text x="200" y="150" systemLanguage="fr">de combustible</text>
+		<text x="200" y="150" systemLanguage="it">nel mondo (2015)</text>
+		<text x="200" y="150" systemLanguage="ja">消費 (2015)</text>
+		<text x="200" y="150" systemLanguage="nl">(2015)</text>
+		<text x="200" y="150" systemLanguage="pl">na świecie</text>
+		<text x="200" y="150" systemLanguage="pt">(2015)</text>
+		<text x="200" y="150" systemLanguage="ru">энергии</text>
+		<text x="200" y="150" systemLanguage="sv">(2015)</text>
+		<text x="200" y="150" systemLanguage="zh">消耗量 (2015)</text>
+		<text x="200" y="150">by Fuel (2015)</text>
+	</switch>
+		<g font-size="20" text-anchor="middle">
+			<switch>
+				<text x="-10" y="175" systemLanguage="ar">‎%الأحفوري الوقود 85,5% المتجددة 10,1</text>
+				<text x="-10" y="175" systemLanguage="de">Fossile 85,5% Erneuerbare 10,1%</text>
+				<text x="-10" y="175" systemLanguage="es">Fósil 85,5% Renovable 10,1%</text>
+				<text x="-10" y="175" systemLanguage="fi">Fossiilinen 85,5% Uusiutuva 10,1%</text>
+				<text x="-10" y="175" systemLanguage="fr">Fossiles 85,5% Renouvelable 10,1%</text>
+				<text x="-10" y="175" systemLanguage="it">Fossile 85,5% Rinnovabili 10,1%</text>
+				<text x="-10" y="175" systemLanguage="ja">化石燃料 85.5% 再生可能エネルギー 10.1%</text>
+				<text x="-10" y="175" systemLanguage="nl">Fossiele 85,5% Duurzame 10,1%</text>
+				<text x="-10" y="175" systemLanguage="pl">Kopalne 85,5% Odnawialna 10,1%</text>
+				<text x="-10" y="175" systemLanguage="pt">Fóssil 85,5% Renovável 10,1%</text>
+				<text x="-10" y="175" systemLanguage="ru">Ископаемые 85,5% Возобновляемая 10,1%</text>
+				<text x="-10" y="175" systemLanguage="sv">Fossila bränslen 85,5% Förnybara 10,1%</text>
+				<text x="-10" y="175" systemLanguage="zh">化石燃料 85.5% 可再生能源 10.1%</text>
+				<text x="-10" y="175">Fossil Fuel 85.5% Renewable 10.1%</text>
+			</switch>
+		</g>
+	</g>
+</g>
+</svg>
